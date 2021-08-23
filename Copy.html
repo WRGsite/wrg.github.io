@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cara Membuat Copy Clipboard Sederhana dengan jquery</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row text-center">
+                <h1>Cara Membuat Copy Clipboard Sederhana dengan jquery</h1>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label></label>
+                        <input type="text" class="form-control" id="dataCopy" placeholder="Masukan teks" name="">
+                    </div>
+                    <button type="submit" class="btn btn-md btn-primary ml-3" onclick="copyTeks()">Copy</button>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row mt-5">
+                <label>Untuk mencobanya silahkan paste disini</label>
+                <textarea class="form-control" placeholder="silahkan paste disini"></textarea>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        function copyTeks(){
+            var valueText = $("#dataCopy").select().val();
+            document.execCommand("copy");
+            alert("data '" + valueText + "' berhasil di salin" )
+        }
+    </script>
+</body>
+</html>
